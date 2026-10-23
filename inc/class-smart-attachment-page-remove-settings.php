@@ -16,7 +16,7 @@ if ( ! defined( 'WPINC' ) ) {
  */
 if ( !class_exists( 'PP_Smart_Attachment_Page_Remove_Settings' ) ) {
   
-  class PP_Smart_Attachment_Page_Remove_Settings extends PPF09_Settings {
+  class PP_Smart_Attachment_Page_Remove_Settings extends WPUMPPF1_Settings {
   
     
   }
