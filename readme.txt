@@ -1,6 +1,6 @@
 === Smart Attachment Page Remove ===
 Contributors: wpusermanager, petersplugins
-Tags: Attachment Page, Attachment Pages, spam, antispam comment spam, classicpress
+Tags: attachment page, attachment pages, attachment, media, spam
 Requires at least: 4.0
 Tested up to: 7.1
 Stable tag: 4.0.6
