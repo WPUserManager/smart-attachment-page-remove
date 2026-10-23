@@ -15,7 +15,7 @@ if ( ! defined( 'WPINC' ) ) {
  */
 if ( !class_exists( 'PP_Smart_Attachment_Page_Remove_Admin' ) ) {
   
-  class PP_Smart_Attachment_Page_Remove_Admin extends PPF09_Admin {
+  class PP_Smart_Attachment_Page_Remove_Admin extends WPUMPPF1_Admin {
 
     
     /**
@@ -50,6 +50,7 @@ if ( !class_exists( 'PP_Smart_Attachment_Page_Remove_Admin' ) ) {
             'order'   => 10,
             'title'   => esc_html__( 'Advanced', 'smart-attachment-page-remove' ),
             'icon'    => 'advanced',
+            'html'    => $this->core_setting_note(),
             'fields' => array(
               array(
                 'key'      =>'send_http_410',
@@ -65,6 +66,30 @@ if ( !class_exists( 'PP_Smart_Attachment_Page_Remove_Admin' ) ) {
       
     }
     
+    /**
+     * explain WordPress's own attachment pages setting (WP 6.4+)
+     *
+     * @since  4.0.6
+     * @access private
+     * @return string HTML
+     */
+    private function core_setting_note() {
+
+      $note = esc_html__( 'Since WordPress 6.4, sites installed on 6.4 or later have attachment pages turned off by WordPress itself: their URLs redirect to the file. Older sites keep them. This plugin removes attachment pages on any site, and sends a 404 or 410 instead of redirecting.', 'smart-attachment-page-remove' );
+
+      $core = get_option( 'wp_attachment_pages_enabled' );
+
+      if ( false !== $core ) {
+
+        $note .= ' ' . ( $core ? esc_html__( "On this site WordPress's own setting has attachment pages turned on.", 'smart-attachment-page-remove' ) : esc_html__( "On this site WordPress's own setting has attachment pages turned off.", 'smart-attachment-page-remove' ) );
+
+      }
+
+      return '<p><span class="dashicons dashicons-info"></span>&nbsp;' . $note . '</p>';
+
+    }
+
+
     /**
      * handle the HTTP 410 option
      * moved to PP_Smart_Attachment_Page_Remove_Admin in v 4.0.0

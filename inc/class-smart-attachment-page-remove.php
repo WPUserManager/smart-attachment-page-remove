@@ -16,7 +16,7 @@ if ( ! defined( 'WPINC' ) ) {
  */
 if ( !class_exists( 'PP_Smart_Attachment_Page_Remove' ) ) { 
 
-  class PP_Smart_Attachment_Page_Remove extends PPF09_Plugin {
+  class PP_Smart_Attachment_Page_Remove extends WPUMPPF1_Plugin {
     
      /**
      * Admin Class

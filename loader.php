@@ -38,7 +38,7 @@ function pp_smart_attachment_page_remove() {
     'slug'      => pathinfo( dirname( __FILE__ ) . '/smart-attachment-page-remove.php', PATHINFO_FILENAME ),
     'name'      => 'Smart Attachment Page Remove',
     'shortname' => 'Smart Attachment Page Remove',
-    'version'   => '4.0.5'
+    'version'   => '4.0.6'
     
   ) );
     

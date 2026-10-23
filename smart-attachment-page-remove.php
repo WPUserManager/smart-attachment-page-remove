@@ -9,9 +9,9 @@
  * Plugin Name: Smart Attachment Page Remove
  * Plugin URI: https://wordpress.org/plugins/smart-attachment-page-remove/
  * Description: Completely remove Attachment Pages from your Blog
- * Version: 4.0.5
- * Author: Peter Raschendorfer
- * Author URI: https://profiles.wordpress.org/petersplugins/
+ * Version: 4.0.6
+ * Author: WP User Manager
+ * Author URI: https://wpusermanager.com
  * Text Domain: smart-attachment-page-remove
  * License: GPL2+
  * License URI: http://www.gnu.org/licenses/gpl-2.0.txt
