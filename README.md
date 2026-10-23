@@ -16,3 +16,9 @@ The tag runs `.github/workflows/release.yml`: the shared
 everything not in `.distignore`, checks all three versions match the tag,
 deploys to wordpress.org SVN (org secrets `SVN_USERNAME`, `SVN_PASSWORD`) and
 creates the GitHub release. Pull requests run the same build as a dry run.
+
+## Listing art
+
+`.wordpress-org/` holds the icon and banner for the wordpress.org listing. They live
+in the SVN `assets/` folder, not in the plugin, so a release doesn't upload them:
+commit changes to `https://plugins.svn.wordpress.org/smart-attachment-page-remove/assets/`.
